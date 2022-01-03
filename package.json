@@ -1,17 +1,17 @@
 {
     "name": "@prantlf/requirejs",
     "description": "Node adapter for RequireJS, for loading AMD modules. Includes RequireJS optimizer. Forked to fix the source map support.",
-    "version": "2.4.0",
+    "version": "2.4.1",
     "author": "Ferdinand Prantl <prantlf@gmail.com>",
     "contributors": [
-	    "James Burke <jrburke@gmail.com> (http://github.com/jrburke)"
+        "James Burke <jrburke@gmail.com> (http://github.com/jrburke)"
     ],
     "license": "MIT",
     "licenses": [
-      {
-        "type": "MIT",
-        "url": "https://github.com/prantlf/r.js/blob/master/package/LICENSE"
-      }
+        {
+            "type": "MIT",
+            "url": "https://github.com/prantlf/r.js/blob/master/package/LICENSE"
+        }
     ],
     "homepage": "https://github.com/prantlf/r.js#readme",
     "repository": {
@@ -19,7 +19,7 @@
         "url": "https://github.com/prantlf/r.js.git"
     },
     "bugs": {
-      "url": "https://github.com/prantlf/r.js/issues"
+        "url": "https://github.com/prantlf/r.js/issues"
     },
     "engines": {
         "node": ">=0.4.0"
@@ -36,43 +36,43 @@
         "require.min.js.map"
     ],
     "scripts": {
-      "prepare": "npm run require && mkdir -p bin && npm run build",
-      "require": "npm run require:copy && npm run require:minify",
-      "require:copy": "cp node_modules/requirejs/require.js .",
-      "require:minify": "terser -o require.min.js -cm --comments false --source-map includeSources --source-map url=require.min.js.map require.js",
-      "build": "node dist && node copydist && cp r.js bin",
-      "test": "cd tests && ./alln.sh"
+        "prepare": "npm run require && mkdir -p bin && npm run build",
+        "require": "npm run require:copy && npm run require:minify",
+        "require:copy": "cp node_modules/requirejs/require.js .",
+        "require:minify": "terser -o require.min.js -cm --comments false --source-map includeSources --source-map url=require.min.js.map require.js",
+        "build": "node dist && node copydist && cp r.js bin",
+        "test": "cd tests && ./alln.sh"
     },
     "release": {
-      "plugins": [
-        "@semantic-release/commit-analyzer",
-        "@semantic-release/release-notes-generator",
-        "@semantic-release/changelog",
-        "@semantic-release/npm",
-        [
-          "@semantic-release/github",
-          {
-            "failComment": false
-          }
-        ],
-        "@semantic-release/git"
-      ]
+        "plugins": [
+            "@semantic-release/commit-analyzer",
+            "@semantic-release/release-notes-generator",
+            "@semantic-release/changelog",
+            "@semantic-release/npm",
+            [
+                "@semantic-release/github",
+                {
+                    "failComment": false
+                }
+            ],
+            "@semantic-release/git"
+        ]
     },
     "devDependencies": {
-      "@semantic-release/changelog": "^6.0.1",
-      "@semantic-release/git": "^10.0.1",
-      "requirejs": "^2.3.6",
-      "serve-static": "^1.14.2",
-      "terser": "^5.10.0"
+        "@semantic-release/changelog": "^6.0.1",
+        "@semantic-release/git": "^10.0.1",
+        "requirejs": "^2.3.6",
+        "serve-static": "^1.14.2",
+        "terser": "^5.10.0"
     },
     "keywords": [
-      "requirejs-optimizer",
-      "requirejs",
-      "require",
-      "amd",
-      "umd",
-      "r-js",
-      "optimizer"
+        "requirejs-optimizer",
+        "requirejs",
+        "require",
+        "amd",
+        "umd",
+        "r-js",
+        "optimizer"
     ],
     "volo": {
         "url": "https://raw.github.com/prantlf/r.js/{version}/dist/r.js"
