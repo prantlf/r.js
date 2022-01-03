@@ -1,4 +1,19 @@
-# r.js
+# @prantlf/requirejs
+
+RequireJS for use in the browser and in Node.js. Forked to fix the support of source maps. Includes:
+
+* `require.js`: The browser-based AMD loader.
+* `r.js`: The RequireJS optimizer and AMD runtime for use in Node.js.
+
+More information is available at http://requirejs.org.
+
+This fork wires up source maps of script modules, if they include them, to the source map of the output bundle. It enables debugging of modules transpiled to JavaScript from CoffeeScript, TypeScript or from a more modern JavaScript by Babel.
+
+## require.js
+
+The browser-based AMD loader. Load either the full version - `require.js` - or the minified one - `require.min.js` - on your web page.
+
+## r.js
 
 A command line tool for running JavaScript scripts that use the
 [Asynchronous Module Definition API (AMD)](https://github.com/amdjs/amdjs-api/blob/master/AMD.md)
@@ -13,20 +28,22 @@ r.js is a single script that has two major functions:
 * Includes the [RequireJS Optimizer](http://requirejs.org/docs/optimization.html)
 that combines scripts for optimal browser delivery.
 
-# Installation
+### Installation
 
-## Node
+#### Node.js
 
-    npm install -g requirejs
+    npm i -g @prantlf/requirejs
+    pnpm i -g @prantlf/requirejs
+    yarn add -g @prantlf/requirejs
 
 From then on, you can use `r.js` on the command line to run the optimizer.
 
-## Nashorn/Rhino/Browser
+#### Nashorn/Rhino/Browser
 
 Download the latest release from the
 [RequireJS download page](http://requirejs.org/docs/download.html#rjs).
 
-## xpcshell
+#### xpcshell
 
 [xpcshell](https://developer.mozilla.org/en-US/docs/XPConnect/xpcshell) support
 was added in r.js version 2.1.5, so use that r.js version or later.
@@ -50,12 +67,12 @@ To generate an r.js that also gets copied to **dist** with a time stamp, run:
 
     ./copydist.js
 
-# Running AMD-based projects
+## Running AMD-based projects
 
 If your JS project's main application file is called main.js, then do
 the following:
 
-## Node
+### Node.js
 
     r.js main.js
 
@@ -64,9 +81,9 @@ Requires Node 0.4 or later.
 r.js allows using Node modules installed via npm. For more info see the
 [Use with Node](http://requirejs.org/docs/node.html) docs.
 
-## Java
+### Java
 
-### Nashorn
+#### Nashorn
 
 As of r.js 2.1.16, r.js can run in [Nashorn](http://www.oracle.com/technetwork/articles/java/jf14-nashorn-2126515.html), Java 8+'s JavaScript engine, via the `jjs` command line tool that is installed with Java.
 
@@ -89,7 +106,7 @@ jjs -scripting path/to/r.js -- main.js
 
 All further examples will use the Node notation, but substitute the **r.js** references below with the command line structure mentioned above (`jjs -scripting path/to/r.js -- `).
 
-### Rhino
+#### Rhino
 
 Using Rhino requires some JAR files in the CLASSPATH for it to work:
 
@@ -100,11 +117,11 @@ Using Rhino requires some JAR files in the CLASSPATH for it to work:
 Download those files to your machine. To run r.js, you can use this type of
 command:
 
-### OS X/Linux/Unix:
+##### OS X/Linux/Unix:
 
     java -classpath path/to/rhino/js.jar:path/to/closure/compiler.jar org.mozilla.javascript.tools.shell.Main -opt -1 r.js main.js
 
-### Windows
+##### Windows
 
     java -classpath path/to/rhino/js.jar;path/to/closure/compiler.jar org.mozilla.javascript.tools.shell.Main -opt -1 r.js main.js
 s
@@ -114,7 +131,7 @@ org.mozilla.javascript.tools.shell.Main with
 
 All further examples will use the Node notation, but substitute the **r.js** references below with the appropriate java command.
 
-## xpcshell
+#### xpcshell
 
 To run the optimizer using a build config file or command line build options:
 
@@ -127,7 +144,7 @@ shows how to load AMD modules by using r.js as a library.
 * [tests/xpcshell/build.js](https://github.com/requirejs/r.js/blob/master/tests/xpcshell/build.js):
 shows how to trigger the optimizer from within another .js file.
 
-# Optimizer
+## Optimizer
 
 The optimizer can be run by passing the **-o** command to r.js:
 
@@ -158,15 +175,15 @@ dependencies and inline them in built files.
 If your optimization step does not do this, and you use anonymous modules, you
 will get errors running the built code.
 
-# Other r.js commands
+## Other r.js commands
 
-## Get Version
+### Get Version
 
 To get the version of r.js and the version of require.js used by r.js:
 
     r.js -v
 
-## Convert CommonJS modules
+### Convert CommonJS modules
 
 To convert a directory of CommonJS modules to ones that have define() wrappers:
 
@@ -183,17 +200,17 @@ problems supporting this kind of dynamic module calls in an async environment.
 are normally very brittle and depend on the execution order of the dependent
 modules.
 
-# License
+## License
 
 MIT
 
-# Code of Conduct
+## Code of Conduct
 
 [jQuery Foundation Code of Conduct](https://jquery.org/conduct/).
 
-# Directory layout
+## Directory layout
 
-## Directory prerequisites
+### Directory prerequisites
 
 r.js assumes that there are some other projects checked out as sibling
 directories to it, and named certain names, in order for the tests to pass.
@@ -210,7 +227,7 @@ git clone commands:
 So there should be a sibling `requirejs` and `text` directories to the r.js
 directory containing your clone of the r.js project.
 
-## Directory details
+### Directory details
 
 The r.js project has the following directory layout:
 
@@ -243,7 +260,7 @@ all the files needed for it to run, including the xpcshell binary. Downloading
 [a xulrunner nightly](http://ftp.mozilla.org/pub/mozilla.org/xulrunner/nightly/latest-mozilla-central/)
 might work.
 
-# Contributing code changes
+## Contributing code changes
 
 See the [RequireJS Contributing](http://requirejs.org/docs/contributing.html)
 page for info on how to contribute code/bug fixes to this project.
@@ -252,14 +269,17 @@ Use GitHub pull requests to point to code changes, although for larger changes,
 contact the [requirejs mailing list](http://groups.google.com/group/requirejs)
 to discuss them first.
 
-# Included libraries
+## Included libraries
 
 r.js includes modules from these projects:
 
 * [Esprima](http://esprima.org/)
 * [UglifyJS](https://github.com/mishoo/UglifyJS)
+* [source-map](https://www.npmjs.com/package/source-map)
+* [source-map-resolve](https://www.npmjs.com/package/source-map-resolve)
+* [source-map-url](https://www.npmjs.com/package/source-map-url)
 
-# Doing a release
+## Doing a release
 
 To do a release of version 0.0.0:
 
