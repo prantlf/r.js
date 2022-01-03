@@ -40,7 +40,7 @@
       "require": "npm run require:copy && npm run require:minify",
       "require:copy": "cp node_modules/requirejs/require.js .",
       "require:minify": "terser -o require.min.js -cm --comments false --source-map includeSources --source-map url=require.min.js.map require.js",
-      "build": "node dist && cp r.js bin",
+      "build": "node dist && node copydist && cp r.js bin",
       "test": "cd tests && ./alln.sh"
     },
     "release": {
