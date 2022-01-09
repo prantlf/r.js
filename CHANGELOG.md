@@ -1,3 +1,10 @@
+## [2.4.2](https://github.com/prantlf/r.js/compare/v2.4.1...v2.4.2) (2022-01-09)
+
+
+### Bug Fixes
+
+* Log errors from source map parsing, unify sourcer map wiring up ([3f43fde](https://github.com/prantlf/r.js/commit/3f43fde7e4ed3092f8fe6c6ee306a6cf22bee7ed))
+
 ## [2.4.1](https://github.com/prantlf/r.js/compare/v2.4.0...v2.4.1) (2022-01-03)
 
 
