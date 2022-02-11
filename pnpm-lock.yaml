@@ -6,6 +6,7 @@ specifiers:
   esprima: ^4.0.1
   requirejs: ^2.3.6
   serve-static: ^1.14.2
+  source-map: ~0.6.1
   terser: ^5.10.0
 
 devDependencies:
@@ -14,6 +15,7 @@ devDependencies:
   esprima: 4.0.1
   requirejs: 2.3.6
   serve-static: 1.14.2
+  source-map: 0.6.1
   terser: 5.10.0
 
 packages:
