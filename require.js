@@ -1262,6 +1262,8 @@ var requirejs, require, define;
             context.defQueueMap = {};
         }
 
+        var denyProps = ["__proto__", "constructor", "prototype"];
+
         context = {
             config: config,
             contextName: contextName,
@@ -1306,6 +1308,7 @@ var requirejs, require, define;
                     };
 
                 eachProp(cfg, function (value, prop) {
+                    if (denyProps.indexOf(prop) >= 0) return;
                     if (objs[prop]) {
                         if (!config[prop]) {
                             config[prop] = {};
