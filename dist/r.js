@@ -1,5 +1,5 @@
 /**
- * @license r.js 2.4.1 Mon, 03 Jan 2022 09:16:41 GMT Copyright jQuery Foundation and other contributors.
+ * @license r.js 2.4.1 Fri, 11 Feb 2022 15:02:33 GMT Copyright jQuery Foundation and other contributors.
  * Released under MIT license, http://github.com/requirejs/r.js/LICENSE
  */
 
@@ -19,7 +19,7 @@ var requirejs, require, define, xpcUtil;
 (function (console, args, readFileFunc) {
     var fileName, env, fs, vm, path, exec, rhinoContext, dir, nodeRequire,
         nodeDefine, exists, reqMain, loadedOptimizedLib, existsForNode, Cc, Ci,
-        version = '2.4.1 Mon, 03 Jan 2022 09:16:41 GMT',
+        version = '2.4.1 Fri, 11 Feb 2022 15:02:33 GMT',
         jsSuffixRegExp = /\.js$/,
         commandOption = '',
         useLibLoaded = {},
@@ -1511,6 +1511,8 @@ var requirejs, require, define, xpcUtil;
             context.defQueueMap = {};
         }
 
+        var denyProps = ["__proto__", "constructor", "prototype"];
+
         context = {
             config: config,
             contextName: contextName,
@@ -1555,6 +1557,7 @@ var requirejs, require, define, xpcUtil;
                     };
 
                 eachProp(cfg, function (value, prop) {
+                    if (denyProps.indexOf(prop) >= 0) return;
                     if (objs[prop]) {
                         if (!config[prop]) {
                             config[prop] = {};
@@ -4472,10 +4475,10 @@ define('logger', ['env!env/print'], function (print) {
 
 (function webpackUniversalModuleDefinition(root, factory) {
 /* istanbul ignore next */
-	if(typeof define === 'function' && define.amd)
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
 		define('esprima', [], factory);
-	else if(typeof exports === 'object' && typeof module === 'object')
-			module.exports = factory();
 /* istanbul ignore next */
 	else if(typeof exports === 'object')
 		exports["esprima"] = factory();
@@ -11178,8 +11181,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ }
 /******/ ])
 });
-;
-/*global define, Reflect */
+;/*global define, Reflect */
 
 /*
  * xpcshell has a smaller stack on linux and windows (1MB vs 9MB on mac),
@@ -28669,7 +28671,12 @@ define('build', function (require) {
             //     }
             //     singleContents = singleLines.join("\n");
             // }
-            singleSourceMap = sourceMapResolve.resolveSourceMapSync(singleContents, sourceMapPath, file.readFileSync);
+            try {
+                singleSourceMap = sourceMapResolve.resolveSourceMapSync(singleContents, path, file.readFile);
+            } catch (error) {
+                console.log('Resolving source maps for "' + sourceMapPath + '" failed:');
+                console.log(error);
+            }
             // singleSourceMap = sourceMappingURL.getFrom(singleContents);
             if (singleSourceMap) {
                 singleSourceMap = singleSourceMap.map;
@@ -28690,34 +28697,35 @@ define('build', function (require) {
 
             // Merging the original source map using SourceMapGenerator.applySourceMap
             // does not work if the built-in minificatoin by UglifyJS is enabled.
-            if (singleSourceMap && config.optimize !== 'uglify2') {
+            if (singleSourceMap) {
                 singleSourceMapConsumer = new SourceMapConsumer(singleSourceMap);
                 // Clone the mappings from the input source map shifted by the current
                 // line count of the target bundle.
-                singleSourceMapConsumer.eachMapping(function(mapping) {
-                    // Sanity check for the mapping, which needs to point to a line within
-                    // the single module and source + original location must not be null.
-                    if (mapping.generatedLine <= lineCount && mapping.source) {
-                        sourceMapGenerator.addMapping({
-                            generated: {
-                                line: sourceMapLineNumber + mapping.generatedLine,
-                                column: mapping.generatedColumn
-                            },
-                            original: {
-                                line: mapping.originalLine,
-                                column: mapping.originalColumn
-                            },
-                            source: mapping.source,
-                            name: mapping.name
-                        });
+                singleSourceMapConsumer.eachMapping(function (mapping) {
+                    var newMapping = {
+                        generated: {
+                            line: sourceMapLineNumber + mapping.generatedLine,
+                            column: mapping.generatedColumn
+                        }
+                    };
+                    if (mapping.source != null) {
+                        newMapping.source = mapping.source;
+                        newMapping.original = {
+                            line: mapping.originalLine,
+                            column: mapping.originalColumn
+                        };
+                        if (mapping.name != null) {
+                            newMapping.name = mapping.name;
+                        }
                     }
+                    sourceMapGenerator.addMapping(newMapping);
                 });
                 // If there were more sources of the single module, transfer them
                 // to the source maps of the bundle.
                 singleSourceMapConsumer.sources.forEach(function (source) {
                     var content = singleSourceMapConsumer.sourceContentFor(source);
                     if (content) {
-                      sourceMapGenerator.setSourceContent(source, content);
+                        sourceMapGenerator.setSourceContent(source, content);
                     }
                 });
             } else {
@@ -28741,16 +28749,6 @@ define('build', function (require) {
                 // transforms later like minification can mess up translating back
                 // to the original source.
                 sourceMapGenerator.setSourceContent(sourceMapPath, singleContents);
-
-                // Adapt the source maps of the single module start from the original
-                // source code instead of from the single module inserted to the bundle.
-                if (singleSourceMap) {
-                  // var sourceMapLog = SourceMapGenerator.fromSourceMap(new SourceMapConsumer(singleSourceMap));
-                  // console.log('Source map of', sourceMapPath + ':');
-                  // console.log(sourceMapLog.toJSON());
-                  singleSourceMapConsumer = new SourceMapConsumer(singleSourceMap);
-                  sourceMapGenerator.applySourceMap(singleSourceMapConsumer, sourceMapPath);
-                }
             }
         }
         fileContents += singleContents;
