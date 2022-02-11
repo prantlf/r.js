@@ -1,3 +1,11 @@
+## [2.4.4](https://github.com/prantlf/r.js/compare/v2.4.3...v2.4.4) (2022-02-11)
+
+
+### Bug Fixes
+
+* Avoid prototype polution when creating a new context ([3e9eb74](https://github.com/prantlf/r.js/commit/3e9eb743f6d8d5c077bef4f24893dd59d8fafe33))
+* Upgrade esprima ([242041b](https://github.com/prantlf/r.js/commit/242041b8620a366ca476095ea8b5e8e90891630a))
+
 ## [2.4.3](https://github.com/prantlf/r.js/compare/v2.4.2...v2.4.3) (2022-02-11)
 
 
