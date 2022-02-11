@@ -1,3 +1,10 @@
+## [2.4.3](https://github.com/prantlf/r.js/compare/v2.4.2...v2.4.3) (2022-02-11)
+
+
+### Bug Fixes
+
+* Fix loading of source maps from an external file ([a4b2137](https://github.com/prantlf/r.js/commit/a4b2137aedfd3a164ffac42b8959dbedd972bd93))
+
 ## [2.4.2](https://github.com/prantlf/r.js/compare/v2.4.1...v2.4.2) (2022-01-09)
 
 
