@@ -3,6 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@semantic-release/changelog': ^6.0.1
   '@semantic-release/git': ^10.0.1
+  esprima: ^4.0.1
   requirejs: ^2.3.6
   serve-static: ^1.14.2
   terser: ^5.10.0
@@ -10,6 +11,7 @@ specifiers:
 devDependencies:
   '@semantic-release/changelog': 6.0.1
   '@semantic-release/git': 10.0.1
+  esprima: 4.0.1
   requirejs: 2.3.6
   serve-static: 1.14.2
   terser: 5.10.0
@@ -138,6 +140,12 @@ packages:
 
   /escape-html/1.0.3:
     resolution: {integrity: sha1-Aljq5NPQwJdN4cFpGI7wBR0dGYg=}
+    dev: true
+
+  /esprima/4.0.1:
+    resolution: {integrity: sha512-eGuFFw7Upda+g4p+QHvnW0RyTX/SVeJBDM/gCtMARO0cLuT2HcEKnTPvhjV6aGeqrCB/sbNop0Kszm0jsaWU4A==}
+    engines: {node: '>=4'}
+    hasBin: true
     dev: true
 
   /etag/1.8.1:

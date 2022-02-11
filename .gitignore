@@ -5,6 +5,7 @@
 *.map
 /bin
 /r.js
+build/jslib/esprima.js
 build/jslib/uglifyjs/temp
 build/tests/builds
 build/tests/lib/amdefine/built.js
