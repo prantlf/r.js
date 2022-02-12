@@ -1,3 +1,10 @@
+## [2.4.5](https://github.com/prantlf/r.js/compare/v2.4.4...v2.4.5) (2022-02-12)
+
+
+### Bug Fixes
+
+* Upgrade source-map ([787b5df](https://github.com/prantlf/r.js/commit/787b5df0f89ee94ce3d8a2f241af6aebab373a93))
+
 ## [2.4.4](https://github.com/prantlf/r.js/compare/v2.4.3...v2.4.4) (2022-02-11)
 
 
