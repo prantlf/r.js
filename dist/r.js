@@ -1,5 +1,5 @@
 /**
- * @license r.js 2.4.6 Sun, 13 Feb 2022 08:55:17 GMT Copyright jQuery Foundation and other contributors.
+ * @license r.js 2.4.7 Sun, 13 Feb 2022 09:24:56 GMT Copyright jQuery Foundation and other contributors.
  * Released under MIT license, http://github.com/requirejs/r.js/LICENSE
  */
 
@@ -19,7 +19,7 @@ var requirejs, require, define, xpcUtil;
 (function (console, args, readFileFunc) {
     var fileName, env, fs, vm, path, exec, rhinoContext, dir, nodeRequire,
         nodeDefine, exists, reqMain, loadedOptimizedLib, existsForNode, Cc, Ci,
-        version = '2.4.6 Sun, 13 Feb 2022 08:55:17 GMT',
+        version = '2.4.7 Sun, 13 Feb 2022 09:24:56 GMT',
         jsSuffixRegExp = /\.js$/,
         commandOption = '',
         useLibLoaded = {},
@@ -4475,10 +4475,10 @@ define('logger', ['env!env/print'], function (print) {
 
 (function webpackUniversalModuleDefinition(root, factory) {
 /* istanbul ignore next */
-	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory();
-	else if(typeof define === 'function' && define.amd)
+	if(typeof define === 'function' && define.amd)
 		define('esprima', [], factory);
+	else if(typeof exports === 'object' && typeof module === 'object')
+			module.exports = factory();
 /* istanbul ignore next */
 	else if(typeof exports === 'object')
 		exports["esprima"] = factory();
@@ -11197,10 +11197,10 @@ define('esprimaAdapter', ['esprima', 'env'], function (esprima, env) {
     }
 });
 (function webpackUniversalModuleDefinition(root, factory) {
-	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory();
-	else if(typeof define === 'function' && define.amd)
+	if(typeof define === 'function' && define.amd)
 		define('source-map', [], factory);
+	else if(typeof exports === 'object' && typeof module === 'object')
+			module.exports = factory();
 	else if(typeof exports === 'object')
 		exports["sourceMap"] = factory();
 	else
