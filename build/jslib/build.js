@@ -255,11 +255,13 @@ define(function (require) {
                         }
                     };
                     if (mapping.source != null) {
-                        newMapping.source = mapping.source;
-                        newMapping.original = {
-                            line: mapping.originalLine,
-                            column: mapping.originalColumn
-                        };
+                        if (mapping.originalLine != null) {
+                            newMapping.source = mapping.source;
+                            newMapping.original = {
+                                line: mapping.originalLine,
+                                column: mapping.originalColumn
+                            };
+                        }
                         if (mapping.name != null) {
                             newMapping.name = mapping.name;
                         }
