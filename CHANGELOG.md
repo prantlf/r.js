@@ -1,3 +1,10 @@
+## [2.4.8](https://github.com/prantlf/r.js/compare/v2.4.7...v2.4.8) (2022-02-13)
+
+
+### Bug Fixes
+
+* Work around invalid original mappings ([1bcda37](https://github.com/prantlf/r.js/commit/1bcda3751103ece36b835a955ca7d3676abf9616))
+
 ## [2.4.7](https://github.com/prantlf/r.js/compare/v2.4.6...v2.4.7) (2022-02-13)
 
 
