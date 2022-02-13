@@ -1,5 +1,5 @@
 /**
- * @license r.js 2.4.1 Sat, 12 Feb 2022 20:23:38 GMT Copyright jQuery Foundation and other contributors.
+ * @license r.js 2.4.6 Sun, 13 Feb 2022 08:55:17 GMT Copyright jQuery Foundation and other contributors.
  * Released under MIT license, http://github.com/requirejs/r.js/LICENSE
  */
 
@@ -19,7 +19,7 @@ var requirejs, require, define, xpcUtil;
 (function (console, args, readFileFunc) {
     var fileName, env, fs, vm, path, exec, rhinoContext, dir, nodeRequire,
         nodeDefine, exists, reqMain, loadedOptimizedLib, existsForNode, Cc, Ci,
-        version = '2.4.1 Sat, 12 Feb 2022 20:23:38 GMT',
+        version = '2.4.6 Sun, 13 Feb 2022 08:55:17 GMT',
         jsSuffixRegExp = /\.js$/,
         commandOption = '',
         useLibLoaded = {},
@@ -11189,7 +11189,7 @@ return /******/ (function(modules) { // webpackBootstrap
  * quickly. So favor it built in Reflect parser:
  * https://developer.mozilla.org/en-US/docs/SpiderMonkey/Parser_API
  */
-define('esprimaAdapter', ['./esprima', 'env'], function (esprima, env) {
+define('esprimaAdapter', ['esprima', 'env'], function (esprima, env) {
     if (env.get() === 'xpconnect' && typeof Reflect !== 'undefined') {
         return Reflect;
     } else {
@@ -28873,7 +28873,7 @@ define('build', function (require) {
             }
 
             // Merging the original source map using SourceMapGenerator.applySourceMap
-            // does not work if the built-in minificatoin by UglifyJS is enabled.
+            // does not work if the built-in minification by UglifyJS is enabled.
             if (singleSourceMap) {
                 singleSourceMapConsumer = new SourceMapConsumer(singleSourceMap);
                 // Clone the mappings from the input source map shifted by the current
