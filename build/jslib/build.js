@@ -242,7 +242,7 @@ define(function (require) {
             }
 
             // Merging the original source map using SourceMapGenerator.applySourceMap
-            // does not work if the built-in minificatoin by UglifyJS is enabled.
+            // does not work if the built-in minification by UglifyJS is enabled.
             if (singleSourceMap) {
                 singleSourceMapConsumer = new SourceMapConsumer(singleSourceMap);
                 // Clone the mappings from the input source map shifted by the current
