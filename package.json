@@ -36,7 +36,7 @@
         "require.min.js.map"
     ],
     "scripts": {
-        "prepare": "npm run require && npm run esprima && npm run source-map && mkdir -p bin && npm run build",
+        "prepare": "npm run require && mkdir -p bin && npm run build",
         "require": "npm run require:minify",
         "esprima": "cp node_modules/esprima/dist/esprima.js build/jslib/",
         "source-map": "cp node_modules/source-map/dist/source-map.js build/jslib/",
