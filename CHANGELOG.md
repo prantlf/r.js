@@ -1,3 +1,10 @@
+## [2.4.7](https://github.com/prantlf/r.js/compare/v2.4.6...v2.4.7) (2022-02-13)
+
+
+### Bug Fixes
+
+* Include esprima and source-map with a modified UMD wrapper ([b7624a1](https://github.com/prantlf/r.js/commit/b7624a1785e7eba4a602ee84fdc33c18b8d2910a))
+
 ## [2.4.6](https://github.com/prantlf/r.js/compare/v2.4.5...v2.4.6) (2022-02-13)
 
 
