@@ -1,3 +1,10 @@
+## [2.4.6](https://github.com/prantlf/r.js/compare/v2.4.5...v2.4.6) (2022-02-13)
+
+
+### Bug Fixes
+
+* Fix loading esprima ([f8433bc](https://github.com/prantlf/r.js/commit/f8433bc09420d543e013b9922c200747f5d434ab))
+
 ## [2.4.5](https://github.com/prantlf/r.js/compare/v2.4.4...v2.4.5) (2022-02-12)
 
 
