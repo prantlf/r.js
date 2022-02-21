@@ -1,3 +1,10 @@
+# [2.5.0](https://github.com/prantlf/r.js/compare/v2.4.8...v2.5.0) (2022-02-21)
+
+
+### Features
+
+* Let the application process the root-level dependencies by a callback ([0e285f3](https://github.com/prantlf/r.js/commit/0e285f3124f60c861c15db1b64922d4d4645be58))
+
 ## [2.4.8](https://github.com/prantlf/r.js/compare/v2.4.7...v2.4.8) (2022-02-13)
 
 
