@@ -1797,6 +1797,11 @@ var requirejs, require, define;
             context.configure(config);
         }
 
+        // Let the application prefix the root-level dependencies, for example
+        if (isArray(deps) && req.updateDeps) {
+            deps = req.updateDeps(deps);
+        }
+
         return context.require(deps, callback, errback);
     };
 
