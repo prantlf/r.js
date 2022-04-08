@@ -1,3 +1,17 @@
+# [3.0.0](https://github.com/prantlf/r.js/compare/v2.5.0...v3.0.0) (2022-04-08)
+
+
+### Bug Fixes
+
+* Replace Esprima with Meriyah ([01ebd7b](https://github.com/prantlf/r.js/commit/01ebd7b521f9a03bb736db886c37cbf6f21b2f9c))
+
+
+### BREAKING CHANGES
+
+* Changing the parser library might break an existing code.
+Although it is not expected, because both parsers implement the ESTree AST,
+it might happen.
+
 # [2.5.0](https://github.com/prantlf/r.js/compare/v2.4.8...v2.5.0) (2022-02-21)
 
 
