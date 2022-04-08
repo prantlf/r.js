@@ -268,8 +268,7 @@ define([ 'env!env/file', 'pragma', 'parse', 'lang', 'logger', 'commonJs', 'prim'
                                             require._cachedDefinesRequireUrls[url] = true;
                                         }
                                     } catch (e1) {
-                                        throw new Error('Parse error using esprima ' +
-                                                        'for file: ' + url + '\n' + e1);
+                                        throw new Error('Parse error for file: ' + url + '\n' + e1);
                                     }
                                 }).then(function () {
                                     if (hasProp(context.plugins, moduleName)) {
@@ -301,8 +300,7 @@ define([ 'env!env/file', 'pragma', 'parse', 'lang', 'logger', 'commonJs', 'prim'
                                             });
                                         }
                                     } catch (e2) {
-                                        throw new Error('Parse error using esprima ' +
-                                                        'for file: ' + url + '\n' + e2);
+                                        throw new Error('Parse error for file: ' + url + '\n' + e2);
                                     }
 
                                     require._cachedFileContents[url] = contents;

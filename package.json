@@ -38,7 +38,7 @@
     "scripts": {
         "prepare": "npm run require && mkdir -p bin && npm run build",
         "require": "npm run require:minify",
-        "esprima": "cp node_modules/esprima/dist/esprima.js build/jslib/",
+        "meriyah": "cp node_modules/meriyah/dist/meriyah-amd.js build/jslib/meriyah.js",
         "source-map": "cp node_modules/source-map/dist/source-map.js build/jslib/",
         "require:copy": "cp node_modules/requirejs/require.js .",
         "require:minify": "terser -o require.min.js -cm --comments false --source-map includeSources --source-map url=require.min.js.map require.js",
@@ -63,11 +63,11 @@
     "devDependencies": {
         "@semantic-release/changelog": "^6.0.1",
         "@semantic-release/git": "^10.0.1",
-        "esprima": "^4.0.1",
+        "meriyah": "^4.2.1",
         "requirejs": "^2.3.6",
-        "serve-static": "^1.14.2",
+        "serve-static": "^1.15.0",
         "source-map": "~0.6.1",
-        "terser": "^5.10.0"
+        "terser": "^5.12.1"
     },
     "keywords": [
         "requirejs-optimizer",

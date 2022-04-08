@@ -7,7 +7,7 @@ RequireJS for use in the browser and in Node.js. Forked to fix the support of so
 
 More information is available at http://requirejs.org.
 
-This fork wires up source maps of script modules, if they include them, to the source map of the output bundle. It enables debugging of modules transpiled to JavaScript from CoffeeScript, TypeScript or from a more modern JavaScript by Babel.
+This fork wires up source maps of script modules, if they include them, to the source map of the output bundle. It enables debugging of modules transpiled to JavaScript from CoffeeScript, TypeScript or from a more modern JavaScript by Babel. Uses Meriyah instead of Esprima.
 
 ## require.js
 
@@ -273,7 +273,7 @@ to discuss them first.
 
 r.js includes modules from these projects:
 
-* [Esprima](http://esprima.org/)
+* [Meriyah](https://meriyah.github.io/meriyah/)
 * [UglifyJS](https://github.com/mishoo/UglifyJS)
 * [source-map](https://www.npmjs.com/package/source-map)
 * [source-map-resolve](https://www.npmjs.com/package/source-map-resolve)

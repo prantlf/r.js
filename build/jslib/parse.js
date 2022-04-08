@@ -1024,7 +1024,7 @@ define(['./esprimaAdapter', 'lang'], function (esprima, lang) {
             for (i = 0; i < ast.comments.length; i++) {
                 commentNode = ast.comments[i];
 
-                if (commentNode.type === 'Line') {
+                if (commentNode.type === 'SingleLine') {
                     value = '//' + commentNode.value + lineEnd;
                     refNode = commentNode;
 
