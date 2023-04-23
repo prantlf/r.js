@@ -1,3 +1,10 @@
+## [3.0.2](https://github.com/prantlf/r.js/compare/v3.0.1...v3.0.2) (2023-04-23)
+
+
+### Bug Fixes
+
+* Fix the "Cannot read property 'type' of undefined" bug ([62acd22](https://github.com/prantlf/r.js/commit/62acd22ea159a157eaf02e780f7dc02c6c6aafe6))
+
 ## [3.0.1](https://github.com/prantlf/r.js/compare/v3.0.0...v3.0.1) (2023-04-23)
 
 
