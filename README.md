@@ -1,13 +1,16 @@
 # @prantlf/requirejs
 
-RequireJS for use in the browser and in Node.js. Forked to fix the support of source maps. Includes:
+RequireJS for the browser and Node.js.
 
 * `require.js`: The browser-based AMD loader.
 * `r.js`: The RequireJS optimizer and AMD runtime for use in Node.js.
 
 More information is available at http://requirejs.org.
 
-This fork wires up source maps of script modules, if they include them, to the source map of the output bundle. It enables debugging of modules transpiled to JavaScript from CoffeeScript, TypeScript or from a more modern JavaScript by Babel. Uses Meriyah instead of Esprima.
+This is a fork of the [original project](https://github.com/requirejs/r.js) with the following changes:
+
+* Wires up source maps of source script modules, if they include them, to the source map of the output bundle. It enables debugging of modules transpiled to JavaScript from CoffeeScript, TypeScript or from a future JavaScript transpiled by Babel.
+* Uses Meriyah instead of Esprima to support the latest standard of the JavaScript langauge by default.
 
 ## require.js
 
@@ -163,7 +166,6 @@ If running in **Java**, be sure to grab the Rhino and Closure Compiler jar files
 
     java -classpath path/to/rhino/js.jar;path/to/closure/compiler.jar org.mozilla.javascript.tools.shell.Main r.js -o path/to/buildconfig.js
 
-
 ## What makes it special
 
 The optimizer is better than using a plain concatenation script because it runs
@@ -278,24 +280,3 @@ r.js includes modules from these projects:
 * [source-map](https://www.npmjs.com/package/source-map)
 * [source-map-resolve](https://www.npmjs.com/package/source-map-resolve)
 * [source-map-url](https://www.npmjs.com/package/source-map-url)
-
-## Doing a release
-
-To do a release of version 0.0.0:
-
-* Make sure the right version of require.js is in the project.
-* Modify build/jslib/x.js to update the r.js version number in two places.
-* node dist.js
-* Run the tests (see above). They should pass. :)
-* mv r.js dist/r.js
-* git commit -am "Release 0.0.0"
-* git tag -am "Release 0.0.0" 0.0.0
-* git push origin master
-* git push --tags
-
-Update the RequireJS download site to point to the latest release, then update
-the [requirejs/requirejs-npm](https://github.com/requirejs/requirejs-npm) repo to have the latest
-changes and publish the result to npm.
-
-Make sure to keep `#!/usr/bin/env node` as the first line in bin/r.js in
-the requirejs-npm repo.
