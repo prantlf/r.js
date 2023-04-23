@@ -1,2 +1,1 @@
 * Need more docs on optimizeAllPluginResources?
-* allow for npm install
