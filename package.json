@@ -4,7 +4,8 @@
     "version": "3.0.1",
     "author": "Ferdinand Prantl <prantlf@gmail.com>",
     "contributors": [
-        "James Burke <jrburke@gmail.com> (http://github.com/jrburke)"
+        "James Burke <jrburke@gmail.com> (http://github.com/jrburke)",
+        "Serge Markin <serge.n.markin@gmail.com>"
     ],
     "license": "MIT",
     "licenses": [
