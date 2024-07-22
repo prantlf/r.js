@@ -6,27 +6,22 @@ on:
 
 jobs:
   test-or-release:
-    runs-on: ubuntu-latest
+    runs-on: macos-13
     steps:
-    - name: Checkout Sources
-      uses: actions/checkout@v3
-    - name: Install Node
-      uses: actions/setup-node@v3
+    - uses: actions/checkout@v4
+    - uses: pnpm/action-setup@v4
+      with:
+        version: latest
+    - uses: actions/setup-node@v4
       with:
         node-version: 'lts/*'
         registry-url: 'https://registry.npmjs.org'
-    - name: Build
-      uses: pnpm/action-setup@v2
+        cache: 'pnpm'
+    - run: pnpm i --frozen-lockfile --no-verify-store-integrity
+    - run: npm test
+    - uses: prantlf/publish-release-action@v1
       with:
-        version: latest
-        run_install: |
-          - args: [--frozen-lockfile, --no-verify-store-integrity]
-    - name: Test
-      run: npm test
-    - name: Publish
-      uses: cycjimmy/semantic-release-action@v3
-      with:
-        semantic_version: 19
+        no-archives: true
         branches: combined
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
