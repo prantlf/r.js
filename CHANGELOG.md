@@ -1,5 +1,6 @@
-## [3.0.2](https://github.com/prantlf/r.js/compare/v3.0.1...v3.0.2) (2023-04-23)
+# Changes
 
+## [3.0.2](https://github.com/prantlf/r.js/compare/v3.0.1...v3.0.2) (2023-04-23)
 
 ### Bug Fixes
 
@@ -7,18 +8,15 @@
 
 ## [3.0.1](https://github.com/prantlf/r.js/compare/v3.0.0...v3.0.1) (2023-04-23)
 
-
 ### Bug Fixes
 
 * Upgrade meriyah ([d89978c](https://github.com/prantlf/r.js/commit/d89978c59ccef7d5939822a00b04853cb265a99a))
 
-# [3.0.0](https://github.com/prantlf/r.js/compare/v2.5.0...v3.0.0) (2022-04-08)
-
+## [3.0.0](https://github.com/prantlf/r.js/compare/v2.5.0...v3.0.0) (2022-04-08)
 
 ### Bug Fixes
 
 * Replace Esprima with Meriyah ([01ebd7b](https://github.com/prantlf/r.js/commit/01ebd7b521f9a03bb736db886c37cbf6f21b2f9c))
-
 
 ### BREAKING CHANGES
 
@@ -26,8 +24,7 @@
 Although it is not expected, because both parsers implement the ESTree AST,
 it might happen.
 
-# [2.5.0](https://github.com/prantlf/r.js/compare/v2.4.8...v2.5.0) (2022-02-21)
-
+## [2.5.0](https://github.com/prantlf/r.js/compare/v2.4.8...v2.5.0) (2022-02-21)
 
 ### Features
 
@@ -35,13 +32,11 @@ it might happen.
 
 ## [2.4.8](https://github.com/prantlf/r.js/compare/v2.4.7...v2.4.8) (2022-02-13)
 
-
 ### Bug Fixes
 
 * Work around invalid original mappings ([1bcda37](https://github.com/prantlf/r.js/commit/1bcda3751103ece36b835a955ca7d3676abf9616))
 
 ## [2.4.7](https://github.com/prantlf/r.js/compare/v2.4.6...v2.4.7) (2022-02-13)
-
 
 ### Bug Fixes
 
@@ -49,20 +44,17 @@ it might happen.
 
 ## [2.4.6](https://github.com/prantlf/r.js/compare/v2.4.5...v2.4.6) (2022-02-13)
 
-
 ### Bug Fixes
 
 * Fix loading esprima ([f8433bc](https://github.com/prantlf/r.js/commit/f8433bc09420d543e013b9922c200747f5d434ab))
 
 ## [2.4.5](https://github.com/prantlf/r.js/compare/v2.4.4...v2.4.5) (2022-02-12)
 
-
 ### Bug Fixes
 
 * Upgrade source-map ([787b5df](https://github.com/prantlf/r.js/commit/787b5df0f89ee94ce3d8a2f241af6aebab373a93))
 
 ## [2.4.4](https://github.com/prantlf/r.js/compare/v2.4.3...v2.4.4) (2022-02-11)
-
 
 ### Bug Fixes
 
@@ -71,13 +63,11 @@ it might happen.
 
 ## [2.4.3](https://github.com/prantlf/r.js/compare/v2.4.2...v2.4.3) (2022-02-11)
 
-
 ### Bug Fixes
 
 * Fix loading of source maps from an external file ([a4b2137](https://github.com/prantlf/r.js/commit/a4b2137aedfd3a164ffac42b8959dbedd972bd93))
 
 ## [2.4.2](https://github.com/prantlf/r.js/compare/v2.4.1...v2.4.2) (2022-01-09)
-
 
 ### Bug Fixes
 
@@ -85,12 +75,11 @@ it might happen.
 
 ## [2.4.1](https://github.com/prantlf/r.js/compare/v2.4.0...v2.4.1) (2022-01-03)
 
-
 ### Bug Fixes
 
 * Update dist/r.js ([a92da6c](https://github.com/prantlf/r.js/commit/a92da6c61cfe24b47a25420e3df9fea069161472))
 
-# [2.4.0](https://github.com/prantlf/r.js/compare/2.3.6...v2.4.0) (2022-01-03)
+## [2.4.0](https://github.com/prantlf/r.js/compare/2.3.6...v2.4.0) (2022-01-03)
 
 ### Features
 
