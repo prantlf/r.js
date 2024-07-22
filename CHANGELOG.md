@@ -6,6 +6,10 @@
 
 * Upgrade dependencies ([5595927](https://github.com/prantlf/r.js/commit/5595927ac1c0860bb118bb1dc891f3184066bc88))
 
+### Bug Fixes
+
+* Fixes requirejs/requirejs#1854, prototype pollution ([da8c9f8](https://github.com/prantlf/r.js/commit/da8c9f8a9fffe540e29574bbf0146a0ed7763e9e))
+
 ## [3.0.2](https://github.com/prantlf/r.js/compare/v3.0.1...v3.0.2) (2023-04-23)
 
 ### Bug Fixes
