@@ -1,5 +1,11 @@
 # Changes
 
+## [3.2.0](https://github.com/prantlf/r.js/compare/v3.1.0...v3.2.0) (2024-07-25)
+
+### Features
+
+* Upgrade meriyah ([24d4eb6](https://github.com/prantlf/r.js/commit/24d4eb6b90573cbda01e98c6ac806fc0983cfff5))
+
 ## [3.1.0](https://github.com/prantlf/r.js/compare/v3.0.2...v3.1.0) (2024-07-22)
 
 ### Features
