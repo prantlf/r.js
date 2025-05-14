@@ -1,12 +1,19 @@
 name: Test or Release
 
 on:
-  - push
-  - pull_request
+  push:
+    branches:
+      - combined
+    tags-ignore:
+      - '**'
+    paths-ignore:
+      - '**/*.md'
+      - LICENSE
+  pull_request:
 
 jobs:
   test-or-release:
-    runs-on: macos-13
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
     - uses: pnpm/action-setup@v4

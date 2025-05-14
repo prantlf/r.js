@@ -39,36 +39,19 @@
   "scripts": {
     "prepare": "npm run require && mkdir -p bin && npm run build",
     "require": "npm run require:minify",
-    "meriyah": "cp node_modules/meriyah/dist/meriyah.amd.js build/jslib/meriyah.js",
+    "meriyah": "cp node_modules/meriyah/dist/meriyah.umd.js build/jslib/meriyah.js",
     "source-map": "cp node_modules/source-map/dist/source-map.js build/jslib/",
     "require:copy": "cp node_modules/requirejs/require.js .",
     "require:minify": "terser -o require.min.js -cm --comments false --source-map includeSources --source-map url=require.min.js.map require.js",
     "build": "node dist && node copydist && cp r.js bin",
     "test": "cd tests && ./alln.sh"
   },
-  "release": {
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      "@semantic-release/changelog",
-      "@semantic-release/npm",
-      [
-        "@semantic-release/github",
-        {
-          "failComment": false
-        }
-      ],
-      "@semantic-release/git"
-    ]
-  },
   "devDependencies": {
-    "@semantic-release/changelog": "^6.0.3",
-    "@semantic-release/git": "^10.0.1",
-    "meriyah": "^5.0.0",
+    "meriyah": "^6.0.6",
     "requirejs": "^2.3.7",
-    "serve-static": "^1.15.0",
+    "serve-static": "^2.2.0",
     "source-map": "~0.6.1",
-    "terser": "^5.31.3"
+    "terser": "^5.39.1"
   },
   "keywords": [
     "requirejs-optimizer",
