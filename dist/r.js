@@ -1,5 +1,5 @@
 /**
- * @license r.js 3.3.0 Wed, 14 May 2025 07:55:43 GMT Copyright jQuery Foundation and other contributors.
+ * @license r.js 3.3.1 Wed, 14 May 2025 10:01:47 GMT Copyright jQuery Foundation and other contributors.
  * Released under MIT license, http://github.com/requirejs/r.js/LICENSE
  */
 
@@ -19,7 +19,7 @@ var requirejs, require, define, xpcUtil;
 (function (console, args, readFileFunc) {
     var fileName, env, fs, vm, path, exec, rhinoContext, dir, nodeRequire,
         nodeDefine, exists, reqMain, loadedOptimizedLib, existsForNode, Cc, Ci,
-        version = '3.3.0 Wed, 14 May 2025 07:55:43 GMT',
+        version = '3.3.1 Wed, 14 May 2025 10:01:47 GMT',
         jsSuffixRegExp = /\.js$/,
         commandOption = '',
         useLibLoaded = {},
@@ -4476,11 +4476,7 @@ define('logger', ['env!env/print'], function (print) {
 //so that the build does not attempt to inline some env modules,
 //like Node's fs and path.
 
-(function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
-  typeof define === 'function' && define.amd ? define('meriyah', ['exports'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.meriyah = {}));
-})(this, (function (exports) { 'use strict';
+define('meriyah', ['exports'], (function (exports) { 'use strict';
 
   const errorMessages = {
       [0]: 'Unexpected token',
