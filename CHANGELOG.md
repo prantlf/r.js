@@ -1,5 +1,11 @@
 # Changes
 
+## [3.3.1](https://github.com/prantlf/r.js/compare/v3.3.0...v3.3.1) (2025-05-14)
+
+### Bug Fixes
+
+* Include Meriyah as AMD, not UMD bundle ([f22ed75](https://github.com/prantlf/r.js/commit/f22ed7538754c14390a4e9d2d13137b519959974))
+
 ## [3.3.0](https://github.com/prantlf/r.js/compare/v3.2.0...v3.3.0) (2025-05-14)
 
 ### Features

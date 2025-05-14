@@ -1,5 +1,5 @@
 /**
- * @license r.js 3.3.1 Wed, 14 May 2025 10:01:47 GMT Copyright jQuery Foundation and other contributors.
+ * @license r.js 3.3.1 Wed, 14 May 2025 10:03:21 GMT Copyright jQuery Foundation and other contributors.
  * Released under MIT license, http://github.com/requirejs/r.js/LICENSE
  */
 
@@ -19,7 +19,7 @@ var requirejs, require, define, xpcUtil;
 (function (console, args, readFileFunc) {
     var fileName, env, fs, vm, path, exec, rhinoContext, dir, nodeRequire,
         nodeDefine, exists, reqMain, loadedOptimizedLib, existsForNode, Cc, Ci,
-        version = '3.3.1 Wed, 14 May 2025 10:01:47 GMT',
+        version = '3.3.1 Wed, 14 May 2025 10:03:21 GMT',
         jsSuffixRegExp = /\.js$/,
         commandOption = '',
         useLibLoaded = {},
