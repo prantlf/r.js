@@ -47,11 +47,11 @@
     "test": "cd tests && ./alln.sh"
   },
   "devDependencies": {
-    "meriyah": "^6.0.6",
-    "requirejs": "^2.3.7",
-    "serve-static": "^2.2.0",
+    "meriyah": "^7.1.0",
+    "requirejs": "^2.3.8",
+    "serve-static": "^2.2.1",
     "source-map": "~0.6.1",
-    "terser": "^5.39.1"
+    "terser": "^5.46.2"
   },
   "keywords": [
     "requirejs-optimizer",

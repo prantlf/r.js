@@ -9,20 +9,20 @@ importers:
   .:
     devDependencies:
       meriyah:
-        specifier: ^6.0.6
-        version: 6.0.6
+        specifier: ^7.1.0
+        version: 7.1.0
       requirejs:
-        specifier: ^2.3.7
-        version: 2.3.7
+        specifier: ^2.3.8
+        version: 2.3.8
       serve-static:
-        specifier: ^2.2.0
-        version: 2.2.0
+        specifier: ^2.2.1
+        version: 2.2.1
       source-map:
         specifier: ~0.6.1
         version: 0.6.1
       terser:
-        specifier: ^5.39.1
-        version: 5.39.1
+        specifier: ^5.46.2
+        version: 5.46.2
 
 packages:
 
@@ -47,8 +47,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
 
-  acorn@8.14.1:
-    resolution: {integrity: sha512-OvQ/2pUDKmgfCg++xsTX1wGxfTaszcHVcTctW4UJB4hibJx2HXxxO5UmVgyjMa+ZDsiaf5wWLXYpRWMmBI0QHg==}
+  acorn@8.16.0:
+    resolution: {integrity: sha512-UVJyE9MttOsBQIDKw1skb9nAwQuR5wuGD3+82K6JgJlm/Y+KI92oNsMNGZCYdDsVtRHSak0pcV5Dno5+4jh9sw==}
     engines: {node: '>=0.4.0'}
     hasBin: true
 
@@ -96,9 +96,9 @@ packages:
   inherits@2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
 
-  meriyah@6.0.6:
-    resolution: {integrity: sha512-jXJ2Hn1sLcge9QypNdZwbl/GqF5Qdc46TJA20g9KFa4ZnxQx74bDlJ3RfdaFhUIU3yN0lAcP99EH/XPPAcYcHA==}
-    engines: {node: '>=18.0.0'}
+  meriyah@7.1.0:
+    resolution: {integrity: sha512-4K/lV+RFSrM8vy9H58FSd+wrxrXlPhYOK8AOaNQ7iFaHugYRx4tHIAaRYLMtXx/spMByZ4S080di6lXSTDI9eg==}
+    engines: {node: '>=20.0.0'}
 
   mime-db@1.54.0:
     resolution: {integrity: sha512-aU5EJuIN2WDemCcAp2vFBfp/m4EAhWJnUNSSw0ixs7/kXbd6Pg64EmwJkNdFhB8aWt1sH2CTXrLxo/iAGV3oPQ==}
@@ -123,8 +123,8 @@ packages:
     resolution: {integrity: sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==}
     engines: {node: '>= 0.6'}
 
-  requirejs@2.3.7:
-    resolution: {integrity: sha512-DouTG8T1WanGok6Qjg2SXuCMzszOo0eHeH9hDZ5Y4x8Je+9JB38HdTLT4/VA8OaUhBa0JPVHJ0pyBkM1z+pDsw==}
+  requirejs@2.3.8:
+    resolution: {integrity: sha512-7/cTSLOdYkNBNJcDMWf+luFvMriVm7eYxp4BcFCsAX0wF421Vyce5SXP17c+Jd5otXKGNehIonFlyQXSowL6Mw==}
     engines: {node: '>=0.4.0'}
     hasBin: true
 
@@ -132,8 +132,8 @@ packages:
     resolution: {integrity: sha512-uaW0WwXKpL9blXE2o0bRhoL2EGXIrZxQ2ZQ4mgcfoBxdFmQold+qWsD2jLrfZ0trjKL6vOw0j//eAwcALFjKSw==}
     engines: {node: '>= 18'}
 
-  serve-static@2.2.0:
-    resolution: {integrity: sha512-61g9pCh0Vnh7IutZjtLGGpTA355+OPn2TyDv/6ivP2h/AdAVX9azsoxmg2/M6nZeQZNYBEwIcsne1mJd9oQItQ==}
+  serve-static@2.2.1:
+    resolution: {integrity: sha512-xRXBn0pPqQTVQiC8wyQrKs2MOlX24zQ0POGaj0kultvoOCstBQM5yvOhAVSUwOMjQtTvsPWoNCHfPGwaaQJhTw==}
     engines: {node: '>= 18'}
 
   setprototypeof@1.2.0:
@@ -150,8 +150,8 @@ packages:
     resolution: {integrity: sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==}
     engines: {node: '>= 0.8'}
 
-  terser@5.39.1:
-    resolution: {integrity: sha512-Mm6+uad0ZuDtcV8/4uOZQDQ8RuiC5Pu+iZRedJtF7yA/27sPL7d++In/AJKpWZlU3SYMPPkVfwetn6sgZ66pUA==}
+  terser@5.46.2:
+    resolution: {integrity: sha512-uxfo9fPcSgLDYob/w1FuL0c99MWiJDnv+5qXSQc5+Ki5NjVNsYi66INnMFBjf6uFz6OnX12piJQPF4IpjJTNTw==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -183,7 +183,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  acorn@8.14.1: {}
+  acorn@8.16.0: {}
 
   buffer-from@1.1.2: {}
 
@@ -215,7 +215,7 @@ snapshots:
 
   inherits@2.0.4: {}
 
-  meriyah@6.0.6: {}
+  meriyah@7.1.0: {}
 
   mime-db@1.54.0: {}
 
@@ -233,7 +233,7 @@ snapshots:
 
   range-parser@1.2.1: {}
 
-  requirejs@2.3.7: {}
+  requirejs@2.3.8: {}
 
   send@1.2.0:
     dependencies:
@@ -251,7 +251,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  serve-static@2.2.0:
+  serve-static@2.2.1:
     dependencies:
       encodeurl: 2.0.0
       escape-html: 1.0.3
@@ -271,10 +271,10 @@ snapshots:
 
   statuses@2.0.1: {}
 
-  terser@5.39.1:
+  terser@5.46.2:
     dependencies:
       '@jridgewell/source-map': 0.3.6
-      acorn: 8.14.1
+      acorn: 8.16.0
       commander: 2.20.3
       source-map-support: 0.5.21
 
