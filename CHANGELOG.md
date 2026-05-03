@@ -1,5 +1,11 @@
 # Changes
 
+## [3.4.0](https://github.com/prantlf/r.js/compare/v3.3.1...v3.4.0) (2026-05-03)
+
+### Features
+
+* Upgrade dependencies ([77247fd](https://github.com/prantlf/r.js/commit/77247fd65f510d5f340ddf1a3ab7b4f0fb291962))
+
 ## [3.3.1](https://github.com/prantlf/r.js/compare/v3.3.0...v3.3.1) (2025-05-14)
 
 ### Bug Fixes
