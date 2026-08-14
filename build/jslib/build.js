@@ -2206,7 +2206,7 @@ define(function (require) {
 
                         //Add to the source map and to the final contents
                         fileContents = appendToFileContents(fileContents, singleContents, path, config, module,
-                                                            sourceMapGenerator);
+                                                            sourceMapGenerator) + '\n';
                     });
                 };
             })).then(function () {
