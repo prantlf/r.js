@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       meriyah:
-        specifier: ^7.1.0
-        version: 7.1.0
+        specifier: ^7.4.1
+        version: 7.4.1
       requirejs:
         specifier: ^2.3.8
         version: 2.3.8
@@ -21,8 +21,8 @@ importers:
         specifier: ~0.6.1
         version: 0.6.1
       terser:
-        specifier: ^5.46.2
-        version: 5.46.2
+        specifier: ^5.51.2
+        version: 5.51.2
 
 packages:
 
@@ -96,8 +96,8 @@ packages:
   inherits@2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
 
-  meriyah@7.1.0:
-    resolution: {integrity: sha512-4K/lV+RFSrM8vy9H58FSd+wrxrXlPhYOK8AOaNQ7iFaHugYRx4tHIAaRYLMtXx/spMByZ4S080di6lXSTDI9eg==}
+  meriyah@7.4.1:
+    resolution: {integrity: sha512-3fIW/dyrrS7xbcxs/EHstPTZX9l/NVLDrXB1b+nNKoS98MpBonPH4kZ9MXUxH1QTlY34jp7ir7eMts1FDC9weA==}
     engines: {node: '>=20.0.0'}
 
   mime-db@1.54.0:
@@ -150,8 +150,8 @@ packages:
     resolution: {integrity: sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==}
     engines: {node: '>= 0.8'}
 
-  terser@5.46.2:
-    resolution: {integrity: sha512-uxfo9fPcSgLDYob/w1FuL0c99MWiJDnv+5qXSQc5+Ki5NjVNsYi66INnMFBjf6uFz6OnX12piJQPF4IpjJTNTw==}
+  terser@5.51.2:
+    resolution: {integrity: sha512-bWnjSNscmuI+GJze6ZupnHP8G/cTcsJF+bXCeQknk2SHQsgbNJnLrqiH9jZ2W4STPVXH2mDKKRX3iwPhc9Cn/Q==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -215,7 +215,7 @@ snapshots:
 
   inherits@2.0.4: {}
 
-  meriyah@7.1.0: {}
+  meriyah@7.4.1: {}
 
   mime-db@1.54.0: {}
 
@@ -271,7 +271,7 @@ snapshots:
 
   statuses@2.0.1: {}
 
-  terser@5.46.2:
+  terser@5.51.2:
     dependencies:
       '@jridgewell/source-map': 0.3.6
       acorn: 8.16.0

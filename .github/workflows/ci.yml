@@ -19,21 +19,21 @@ jobs:
   test-and-release:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - uses: pnpm/action-setup@v4
+    - uses: actions/checkout@v7
+    - uses: pnpm/action-setup@v6
       with:
         version: latest
-    - uses: actions/setup-node@v4
+    - uses: actions/setup-node@v7
       with:
         node-version: 'lts/*'
         registry-url: 'https://registry.npmjs.org'
         cache: 'pnpm'
     - run: pnpm i --frozen-lockfile --no-verify-store-integrity
     - run: npm test
-    - uses: prantlf/publish-release-action@v1
+    - uses: prantlf/publish-release-action@v2
       with:
+        no-npm-auth: true
         no-archives: true
         branches: combined
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
