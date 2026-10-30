@@ -1,5 +1,11 @@
 # Changes
 
+## [3.5.0](https://github.com/prantlf/r.js/compare/v3.4.0...v3.5.0) (2026-10-30)
+
+### Features
+
+* Upgrade JavaScript parser ([ec90dd5](https://github.com/prantlf/r.js/commit/ec90dd52ddd15d1714f9efbe9846135c23f1aeb1))
+
 ## [3.4.0](https://github.com/prantlf/r.js/compare/v3.3.1...v3.4.0) (2026-05-03)
 
 ### Features
